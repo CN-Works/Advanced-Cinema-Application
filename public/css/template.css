@@ -1,0 +1,52 @@
+* {
+    font-family: "Poppins", sans-serif;
+    padding : 0;
+    margin : 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-dark: #1b1b1b;
+    --main-gray: #808080;
+    --main-orange: #ffa31a;
+    --main-black: #292929;
+    --main-white: #F2EFE9;
+}
+
+.text-orange {
+    color: var(--main-orange);
+}
+
+header {
+    height: 15vh;
+    background-color: var(--main-black);
+
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+}
+
+footer {
+    height: 10vh;
+    background-color: var(--main-black);
+    color: var(--main-white);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.1rem;
+}
+
+.footer-text {
+    display: flex;
+    gap: 2px;
+}
+
+.gitlink {
+    text-decoration: none;
+}
