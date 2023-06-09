@@ -34,7 +34,7 @@ header {
 ul {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     gap: 15px;
 
     height: 100%;
@@ -74,16 +74,23 @@ li {
     color: var(--main-white);
 }
 
+.header-connexion {
+    color: var(--main-white);
+}
+
+.header-connexion:hover {
+    color: var(--main-orange);
+}
+
 a {
     text-decoration: none;
 }
 
-a:visited {
-    color: var(--main-white);
-}
+/* a:visited {
+} */
 
 footer {
-    height: 10vh;
+    height: 15vh;
     background-color: var(--main-dark);
     color: var(--main-white);
 

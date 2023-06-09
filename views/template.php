@@ -17,17 +17,17 @@
         <ul>
             <li><a class="header-category" href="index.php?action=HomePage">Home</a></li>
             <li><a class="header-category" href="index.php?action=movieList">Movies</a></li>
-            <li><a class="header-category" href="index.php?action=genreList">Genre</a></li>
             <li><a class="header-category" href="index.php?action=actorList">Actors</a></li>
+            <li><a class="header-category" href="index.php?action=genreList">Genre</a></li>
             <li><a class="header-category" href="index.php?action=producerList">Producers</a></li>
         </ul>
-        <a href="">Connexion</a>
+        <a class="header-connexion" href="">Connexion</a>
     </header>
 
     <?php echo $content ?>
 
     <footer>
-        <small class="footer-text">Movie website named "CineHub", made by <a href="https://github.com/CN-Works" class="text-orange gitlink">github.com/CN-Works</a>.</small>
+        <small class="footer-text">Any resemblance to an existing or former site is purely coincidental. Created by <a href="https://github.com/CN-Works" class="text-orange gitlink">github.com/CN-Works</a>.</small>
     </footer>
 </body>
 </html>
