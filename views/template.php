@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/template.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hammersmith+One">
     <!-- Tab icons -->
     <link rel="icon" href="public/images/cinehub_small.png">
     <title> <?php echo $title ?> </title>

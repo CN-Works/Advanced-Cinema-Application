@@ -5,7 +5,7 @@
 
 
 <main class="movielist-main">
-    <h2>All movies</h2>
+    <h2 class="movielist-title">All movies</h2>
 
     <div class="movielist-card-part">
         <?php

@@ -1,5 +1,5 @@
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: "Hammersmith One", sans-serif;
     padding : 0;
     margin : 0;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
 }
 
 header {
-    height: 15vh;
+    height: 10vh;
     background-color: var(--main-dark);
 
     display: flex;
@@ -94,7 +94,7 @@ a {
 } */
 
 footer {
-    height: 15vh;
+    height: 5vh;
     background-color: var(--main-dark);
     color: var(--main-white);
 
@@ -108,7 +108,7 @@ footer {
 
 .footer-text {
     display: flex;
-    gap: 2px;
+    gap: 3px;
 }
 
 .gitlink {
@@ -123,10 +123,20 @@ footer {
 /*             Movie-List                     */
 
 .movielist-main {
+    height: 85vh;
+    overflow-y: auto;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+
+    padding: 15px 0;
+    gap: 15px;
+}
+
+.movielist-title {
+    font-size: 2rem;
+    text-decoration: underline;
 }
 
 .movielist-card-part {
