@@ -5,7 +5,10 @@
 
 
 <main class="movielist-main">
-    <h2 class="movielist-title">All movies</h2>
+    <div class="movielist-head">
+        <h2 class="movielist-head-title">All movies</h2>
+        <img class="movielist-head-image unselectable" src="public/images/movie_camera.png" alt="Modern movie camera image/icon">
+    </div>
 
     <div class="movielist-card-part">
         <?php
@@ -31,7 +34,7 @@
 
 
 <?php
-    $title = "All movies";
+    $title = "CineHub - Movies";
     $content = ob_get_clean();
     require("views/template.php");
 ?>

@@ -130,6 +130,7 @@ footer {
 /*             Movie-List                     */
 
 .movielist-main {
+    background-color: var(--main-white);
     height: 85vh;
     overflow-y: auto;
 
@@ -141,9 +142,24 @@ footer {
     gap: 15px;
 }
 
-.movielist-title {
-    font-size: 2rem;
-    text-decoration: underline;
+.movielist-head {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.movielist-head-title {
+    font-size: 1.8rem;
+    color: var(--main-black);
+}
+
+.movielist-head-image {
+    height: 100%;
 }
 
 .movielist-card-part {
