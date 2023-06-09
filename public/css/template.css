@@ -119,3 +119,27 @@ footer {
 .gitlink:visited {
     color: var(--main-orange);
 }
+
+/*             Movie-List                     */
+
+.movielist-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.movielist-card-part {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.movielist-card {
+    width: 22.5%;
+}
+
+.movielist-banner {
+    width: 100%;
+}
