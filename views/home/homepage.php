@@ -6,7 +6,7 @@
 <h2>Fromage frais acceuil</h2>
 
 <?php
-    $title = "Home Page";
+    $title = "CineHub - Home";
     $content = ob_get_clean();
     require("views/template.php");
 ?>

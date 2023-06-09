@@ -22,24 +22,23 @@ header {
     background-color: var(--main-dark);
 
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.header-logo {
+    height: 50%;
 }
+
 
 ul {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     gap: 15px;
 
     height: 100%;
+    width: 50%;
 }
 
 li {
@@ -75,9 +74,17 @@ li {
     color: var(--main-white);
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--main-white);
+}
+
 footer {
     height: 10vh;
-    background-color: var(--main-black);
+    background-color: var(--main-dark);
     color: var(--main-white);
 
     display: flex;
@@ -95,5 +102,9 @@ footer {
 
 .gitlink {
     text-decoration: none;
+    color: var(--main-orange);
+}
+
+.gitlink:visited {
     color: var(--main-orange);
 }
