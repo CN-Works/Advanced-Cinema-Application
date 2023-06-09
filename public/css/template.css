@@ -19,14 +19,60 @@
 
 header {
     height: 15vh;
-    background-color: var(--main-black);
+    background-color: var(--main-dark);
 
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    height: 100%;
 }
 
 li {
     list-style: none;
+    height: 100%;
+    width: 100px;
+}
+
+/* li:hover {
+    background-color: var(--main-black);
+} */
+
+.header-category {
+    height: 100%;
+    width: 100%;
+    /* Text color */
+    color: var(--main-white);
+    text-decoration: none;
+    font-size: 1.2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-category:hover {
+    background-color: var(--main-orange);
+    color: var(--main-orange);
+}
+
+/* Removing default blue color */
+.header-category:visited {
+    color: var(--main-white);
 }
 
 footer {
@@ -49,4 +95,5 @@ footer {
 
 .gitlink {
     text-decoration: none;
+    color: var(--main-orange);
 }

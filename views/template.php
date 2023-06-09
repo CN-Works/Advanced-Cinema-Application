@@ -11,15 +11,13 @@
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.php?action=HomePage">Home</a></li>
-                <li><a href="index.php?action=movieList">Movies</a></li>
-                <li><a href="index.php?action=genreList">Genre</a></li>
-                <li><a href="index.php?action=actorList">Actors</a></li>
-                <li><a href="index.php?action=producerList">Producer</a></li>
-            </ul>
-        </nav>
+        <ul>
+            <li><a class="header-category" href="index.php?action=HomePage">Home</a></li>
+            <li><a class="header-category" href="index.php?action=movieList">Movies</a></li>
+            <li><a class="header-category" href="index.php?action=genreList">Genre</a></li>
+            <li><a class="header-category" href="index.php?action=actorList">Actors</a></li>
+            <li><a class="header-category" href="index.php?action=producerList">Producers</a></li>
+        </ul>
     </header>
 
     <?php echo $content ?>
