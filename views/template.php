@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <img class="header-logo" src="public/images/cinehub.png" alt="CineHub logo">
+        <a href="index.php?action=HomePage" class="header-logo"><img class="header-logo-image" src="public/images/cinehub.png" alt="CineHub logo"></a>
         <ul>
             <li><a class="header-category" href="index.php?action=HomePage">Home</a></li>
             <li><a class="header-category" href="index.php?action=movieList">Movies</a></li>
