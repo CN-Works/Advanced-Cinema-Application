@@ -3,13 +3,25 @@
     ob_start();
 ?>
 
-<h2>Liste des films</h2>
+<main class="movielist-main">
+    <h2>All movies</h2>
 
-<?php
+    <div class="movielist-card-part">
+        <?php
 
-    echo $films->fetchAll();
+        foreach ($films->fetchAll() as $movie) {
+            echo 
+            "<div class='movielist-card'>
+                <img class='movielist-banner' src='public/images/default-image.jpg' alt='".$movie["title"]." movie banner image'>
+                <p class='movielist-card-title'>".$movie["title"]."</p>
+                <p class='movielist-card-description'>".$movie["summary"]."</p>
+            </div>";
+        }
 
-?>
+        ?>
+    </div>
+</main>
+
 
 <?php
     $title = "All movies";

@@ -6,7 +6,7 @@ class MovieController {
     public function findAllMovies() {
         $dao = new DAO();
 
-        $sql_request = "SELECT name FROM actor";
+        $sql_request = "SELECT * FROM movie";
 
         $films = $dao->executeRequest($sql_request);
 
