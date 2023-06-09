@@ -13,6 +13,13 @@
     --main-white: #F2EFE9;
 }
 
+.unselectable {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+}
+
+
 .text-orange {
     color: var(--main-orange);
 }
@@ -152,4 +159,5 @@ footer {
 
 .movielist-banner {
     width: 100%;
+    height: 250px;
 }

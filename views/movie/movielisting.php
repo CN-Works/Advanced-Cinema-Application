@@ -12,9 +12,14 @@
 
         $lorem = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor reiciendis aspernatur unde mollitia pariatur ipsa qui eligendi consequatur facilis rem porro magnam officiis, eaque provident numquam modi dolores aliquid eos.";
         foreach ($films->fetchAll() as $movie) {
+            if (isset($movie["image"])) {
+                $image = $movie["image"];
+            } else {
+                $image = "public/images/default-image.png";
+            }
             echo 
             "<div class='movielist-card'>
-                <img class='movielist-banner' src='public/images/default-image.png' alt='".$movie["title"]." movie banner image'>
+                <img class='movielist-banner unselectable' src='".$image."' alt='".$movie["title"]." movie banner image'>
                 <p class='movielist-card-title'>".$movie["title"]."</p>
                 <p class='movielist-card-description'>".$lorem."</p>
             </div>";
