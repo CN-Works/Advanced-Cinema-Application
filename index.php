@@ -17,7 +17,7 @@ $personController = new PersonController();
 if (isset($_GET["action"])) {
 
     switch($_GET["action"]) {
-        case "movieListing":
+        case "movieList":
             $movieController->findAllMovies();
             break;
         default:
