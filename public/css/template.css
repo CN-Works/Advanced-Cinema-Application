@@ -10,7 +10,7 @@
     --main-gray: #b4d7ec;
     --main-orange: #EE6C4D;
     --main-blue: #3D5A80;
-    --main-white: #f1ffff;
+    --main-white: #fbffff;
 }
 
 .unselectable {
@@ -73,6 +73,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all, 0.25s;
 }
 
 .header-category:hover {
@@ -127,6 +128,36 @@ footer {
     color: var(--main-orange);
 }
 
+/* Home Page */
+.homepage-main {
+    height: 85vh;
+    width: 100%;
+    background: linear-gradient(var(--main-orange), var(--main-dark-blue));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.homepage-banner {
+    width: 50%;
+    height: 80%;
+
+    border-radius: 10px;
+}
+
+.homepage-text {
+    height: 80%;
+    width: 40%;
+    color: var(--main-white);
+    font-size: 5rem;
+
+    text-shadow: 
+      -1px -1px 1px #a9a9a9, 
+      2px 2px 1px #cccccc;
+}
+
+
 /*             Movie-List                     */
 
 .movielist-main {
@@ -179,6 +210,7 @@ footer {
     justify-content: center;
 
     gap: 5px;
+    transition: all, 0.25s;
 }
 
 .movielist-card:hover {
