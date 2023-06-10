@@ -22,8 +22,8 @@
             }
             echo 
             "<div class='movielist-card'>
-                <img class='movielist-banner unselectable' src='".$image."' alt='".$movie["title"]." movie banner image'>
-                <p class='movielist-card-title'>".$movie["title"]."</p>
+                <img class='movielist-banner unselectable' src='".$image."' alt='".$movie["titre_film"]." movie banner image'>
+                <p class='movielist-card-title'>".$movie["titre_film"]."</p>
                 <p class='movielist-card-description'>".$lorem."</p>
             </div>";
         }
