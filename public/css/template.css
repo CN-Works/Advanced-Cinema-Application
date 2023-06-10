@@ -163,7 +163,7 @@ footer {
 /*             Movie-List                     */
 
 .movielist-main {
-    background-color: var(--main-white);
+    background: linear-gradient(var(--main-orange), var(--main-dark-blue));
     height: 85vh;
     overflow-y: auto;
 
@@ -188,11 +188,12 @@ footer {
 
 .movielist-head-title {
     font-size: 1.8rem;
-    color: var(--main-blue);
+    color: var(--main-white);
 }
 
 .movielist-head-image {
     height: 100%;
+    filter: invert();
 }
 
 .movielist-card-part {
@@ -227,9 +228,10 @@ footer {
 
 .movielist-card-title {
     font-size: 1.2rem;
+    color: var(--main-white);
 }
 
 .movielist-card-description {
     font-size: 0.9rem;
-    color: var(--main-blue);
+    color: var(--main-white);
 }
