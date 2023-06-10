@@ -16,6 +16,8 @@ $personController = new PersonController();
 // Redirection using GET method
 if (isset($_GET["action"])) {
 
+    $id = filter_input(INPUT_GET, "id", FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
     switch($_GET["action"]) {
         case "movieList":
             $movieController->findAllMovies();
