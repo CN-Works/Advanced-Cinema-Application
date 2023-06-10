@@ -7,8 +7,8 @@
 
 :root {
     --main-dark: #1b1b1b;
-    --main-gray: #808080;
-    --main-orange: #ffa31a;
+    --main-gray: #4f4f4f;
+    --main-orange: #FF9900;
     --main-black: #292929;
     --main-white: #F2EFE9;
 }
@@ -170,10 +170,32 @@ footer {
     flex-wrap: wrap;
 }
 .movielist-card {
-    width: 22.5%;
+    width: 20.01%;
+    padding: 10px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.movielist-card:hover {
+    background-color: var(--main-orange);
 }
 
 .movielist-banner {
     width: 100%;
-    height: 250px;
+    aspect-ratio: 4/3;
+    border-radius: 10px;
+}
+
+.movielist-card-title {
+    font-size: 1.2rem;
+}
+
+.movielist-card-description {
+    font-size: 0.9rem;
+    color: var(--main-gray);
 }
