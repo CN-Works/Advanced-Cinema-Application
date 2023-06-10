@@ -4,8 +4,8 @@
 ?>
 
 <main class="homepage-main">
-    <img class="homepage-banner" src="public/images/home_banner.jpg" alt="A cool home page banner">
-    <p class="homepage-text">Watch all the best movies of the world, on Ultra High Definition !</p>
+    <img class="homepage-banner unselectable" src="public/images/home_banner.jpg" alt="A cool home page banner">
+    <p class="homepage-text unselectable">Watch all the best movies of the world, on any device in Ultra High Definition !</p>
 </main>
 
 <?php

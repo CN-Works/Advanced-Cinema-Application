@@ -27,7 +27,7 @@
     <?php echo $content ?>
 
     <footer>
-        <small class="footer-text">Any resemblance to an existing or former site is purely coincidental. Created by <a href="https://github.com/CN-Works" class="text-orange gitlink">github.com/CN-Works</a>.</small>
+        <small class="footer-text unselectable">Any resemblance to an existing or former site is purely coincidental. Created by <a href="https://github.com/CN-Works" class="text-orange gitlink">github.com/CN-Works</a>.</small>
     </footer>
 </body>
 </html>
