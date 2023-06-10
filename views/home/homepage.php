@@ -3,7 +3,10 @@
     ob_start();
 ?>
 
-<h2>Fromage frais acceuil</h2>
+<main class="homepage-main">
+    <img class="homepage-banner" src="public/images/home_banner.jpg" alt="A cool home page banner">
+    <p class="homepage-text">Watch all the best movies of the world, on Ultra High Definition !</p>
+</main>
 
 <?php
     $title = "CineHub - Home";
