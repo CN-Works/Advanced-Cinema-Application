@@ -243,5 +243,6 @@ footer {
     color: var(--main-white);
 
     max-height: 110px;
+    font-weight: lighter;
     overflow: auto;
 }
