@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `movie` (
   `title` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
   `date_release` date DEFAULT NULL,
   `summary` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `image` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `id_genre` int NOT NULL,
   `id_producer` int NOT NULL,
   PRIMARY KEY (`id_movie`),
@@ -85,10 +85,11 @@ CREATE TABLE IF NOT EXISTS `movie` (
 
 -- Listage des données de la table cinehub.movie : ~4 rows (environ)
 INSERT INTO `movie` (`id_movie`, `title`, `date_release`, `summary`, `image`, `id_genre`, `id_producer`) VALUES
-	(1, 'Spidergirl à la montagne', '2019-05-24', 'Un film cool', NULL, 1, 2),
-	(2, 'Batman à la plage', '2022-10-26', 'Batman qui prend le soleil', NULL, 2, 1),
-	(3, 'Mr bean en cours de science', '2023-01-02', 'il apprend la chimie', NULL, 2, 3),
-	(4, 'La fin', '2023-04-28', 'ça fini là', NULL, 3, 3);
+	(1, 'Spidergirl à la montagne', '2019-05-24', 'Un film cool', 'https://images.indianexpress.com/2023/01/Pathaan-4.jpg', 1, 2),
+	(2, 'Batman à la plage', '2022-10-26', 'Batman qui prend le soleil', 'https://images.thedirect.com/media/article_full/the-batman-reviews.jpg', 2, 1),
+	(3, 'Mr bean en cours de science', '2023-01-02', 'il apprend la chimie', 'https://www.referenseo.com/wp-content/uploads/2019/03/image-attractive-960x540.jpg', 2, 3),
+	(4, 'La fin', '2023-04-28', 'ça fini là', NULL, 3, 3),
+	(5, 'Orange Palmer', '2023-06-09', 'Une banane qui prend le pouvoir', NULL, 1, 2);
 
 -- Listage de la structure de table cinehub. producer
 CREATE TABLE IF NOT EXISTS `producer` (
