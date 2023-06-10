@@ -31,6 +31,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    font-style: italic;
 }
 
 .header-logo {
@@ -67,7 +68,6 @@ li {
     color: var(--main-white);
     text-decoration: none;
     font-size: 1.2rem;
-    font-style: italic;
 
     display: flex;
     align-items: center;
@@ -233,9 +233,15 @@ footer {
 .movielist-card-title {
     font-size: 1.2rem;
     color: var(--main-white);
+
+    font-style: italic;
+    font-weight: bold;
 }
 
 .movielist-card-description {
     font-size: 0.9rem;
     color: var(--main-white);
+
+    max-height: 110px;
+    overflow: auto;
 }
