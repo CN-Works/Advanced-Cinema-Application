@@ -207,7 +207,7 @@ footer {
     width: 20%;
     padding: 15px;
     margin: 15px 10px;
-    border-radius: 10px;
+    border-radius: 2px;
 
     display: flex;
     flex-direction: column;
@@ -215,19 +215,18 @@ footer {
 
     gap: 5px;
 
-    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
-    transition: all, 1s;
+    transition: all, 0.5s;
 }
 
 .movielist-card:hover {
-    background-color: var(--main-dark-blue);
+    /* background-color: var(--main-dark-blue); */
     box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 
 .movielist-banner {
     width: 100%;
     aspect-ratio: 4/3;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 .movielist-card-title {
@@ -236,6 +235,8 @@ footer {
 
     font-style: italic;
     font-weight: bold;
+
+    margin: 5px 0;
 }
 
 .movielist-card-description {
@@ -245,4 +246,6 @@ footer {
     max-height: 110px;
     font-weight: lighter;
     overflow: auto;
+
+    margin: 5px 0;
 }
