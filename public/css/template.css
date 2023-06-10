@@ -6,11 +6,11 @@
 }
 
 :root {
-    --main-dark: #1b1b1b;
-    --main-gray: #4f4f4f;
-    --main-orange: #FF9900;
-    --main-black: #292929;
-    --main-white: #F2EFE9;
+    --main-dark-blue: #293241;
+    --main-gray: #b4d7ec;
+    --main-orange: #EE6C4D;
+    --main-blue: #3D5A80;
+    --main-white: #f1ffff;
 }
 
 .unselectable {
@@ -26,7 +26,7 @@
 
 header {
     height: 10vh;
-    background-color: var(--main-dark);
+    background-color: var(--main-dark-blue);
 
     display: flex;
     justify-content: space-evenly;
@@ -59,7 +59,7 @@ li {
 }
 
 /* li:hover {
-    background-color: var(--main-black);
+    background-color: var(--main-blue);
 } */
 
 .header-category {
@@ -102,7 +102,7 @@ a {
 
 footer {
     height: 5vh;
-    background-color: var(--main-dark);
+    background-color: var(--main-dark-blue);
     color: var(--main-white);
 
     display: flex;
@@ -155,7 +155,7 @@ footer {
 
 .movielist-head-title {
     font-size: 1.8rem;
-    color: var(--main-black);
+    color: var(--main-blue);
 }
 
 .movielist-head-image {
@@ -197,5 +197,5 @@ footer {
 
 .movielist-card-description {
     font-size: 0.9rem;
-    color: var(--main-gray);
+    color: var(--main-blue);
 }
