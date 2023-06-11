@@ -27,7 +27,7 @@
             "<div class='movielist-card'>
                 <img class='movielist-banner unselectable' src='".$image."' alt='".$movie["titre"]." movie banner image'>
                 <p class='movielist-card-title'>".$movie["titre"]." (".date_format($movie_date,"Y")."),</p>
-                <p class='movielist-card-description'>".$lorem."</p>
+                <p class='movielist-card-description'>".$movie["summary"]."</p>
             </div>";
         }
 
