@@ -1,4 +1,5 @@
-# CineHub
+<div align='center'><h1>CineHub</h1>
+</div>
 
 
 # Preview
