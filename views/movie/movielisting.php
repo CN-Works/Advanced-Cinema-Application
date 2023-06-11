@@ -20,10 +20,13 @@
             } else {
                 $image = "public/images/default-image.png";
             }
+
+            $movie_date = date_create($movie["publish_date"]);
+
             echo 
             "<div class='movielist-card'>
-                <img class='movielist-banner unselectable' src='".$image."' alt='".$movie["titre_film"]." movie banner image'>
-                <p class='movielist-card-title'>".$movie["titre_film"].",</p>
+                <img class='movielist-banner unselectable' src='".$image."' alt='".$movie["titre"]." movie banner image'>
+                <p class='movielist-card-title'>".$movie["titre"]." (".date_format($movie_date,"Y")."),</p>
                 <p class='movielist-card-description'>".$lorem."</p>
             </div>";
         }
