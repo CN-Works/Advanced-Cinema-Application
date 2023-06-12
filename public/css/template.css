@@ -204,13 +204,8 @@ footer {
 .movielist-card {
     background-color: #a9a9a900;
     width: 20%;
-    padding: 20px;
     margin: 15px 10px;
     border-radius: 2px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
     gap: 5px;
 
@@ -227,7 +222,7 @@ footer {
 
 .movielist-banner {
     width: 100%;
-    aspect-ratio: 4/3;
+    height: 250px;
     border-radius: 2px;
 }
 
@@ -238,10 +233,13 @@ footer {
     font-style: italic;
     font-weight: bold;
 
+    padding: 0 5px;
+
     margin: 5px 0;
 }
 
 .movielist-card-description {
+    padding: 0 5px;
     font-size: 0.9rem;
     color: var(--main-white);
 
@@ -308,7 +306,7 @@ footer {
 }
 
 .actor-card-image {
-    height: 80%;
+    height: 70%;
     aspect-ratio: 4/3;
 }
 
@@ -405,4 +403,17 @@ footer {
 
 .genrelist-card-link:visited {
     color: var(--main-white);
+}
+
+/* Producer listing */
+.producerlisting-main {
+    min-height: 85vh;
+    background: linear-gradient(var(--main-orange), var(--main-dark-blue));
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    padding: 15px 0;
+    gap: 15px;
 }
