@@ -5,14 +5,18 @@
 
 <main class="genrelist-main">
     <div class="genrelist-head">
-        <p class="genrelist-head-title">All Genre</p>
-        <img class="genrelist-head-image" src="public/images/movie_camera.png" alt="Movie genre icon">
+        <h2 class="genrelist-head-title">All Genre</h2>
+        <img class="genrelist-head-image unselectable" src="public/images/movie_camera.png" alt="Movie genre icon">
     </div>
 
     <div class="genrelist-cards">
     <?php
         foreach ($genre->fetchAll() as $genredata) {
-            echo $genredata["label"];
+            echo "
+                <div class='genrelist-card'>
+                    <a class='genrelist-card-link' href=''>".$genredata["label"]."</a>
+                </div>
+            ";
         }
     ?>
     </div>
