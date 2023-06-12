@@ -8,15 +8,17 @@
         <h2 class="producerlisting-head-title">All producers</h2>
         <img class="producerlisting-head-image unselectable" src="public/images/director.png" alt="A director icon">
     </div>
-    <?php
-        foreach ($producers->fetchAll() as $producerdata) {
-            echo "
-                <div class='genrelist-card'>
-                    <a class='genrelist-card-link' href=''>".$producerdata["firstname"]." ".$producerdata["lastname"]."</a>
+    <div class='producerlisting-cards'>
+        <?php
+            foreach ($producers->fetchAll() as $producerdata) {
+                echo "
+                <div class='producerlisting-card'>
+                    <a class='producerlisting-card-link' href=''>".$producerdata["firstname"]." ".$producerdata["lastname"]."</a>
                 </div>
-            ";
-        }
-    ?>
+                ";
+            }
+        ?>
+    </div>
 </main>
 
 <?php
