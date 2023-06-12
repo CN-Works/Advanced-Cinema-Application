@@ -315,5 +315,22 @@ footer {
 .actorpage-card-texts {
     height: 80%;
     width: 500px;
-    outline: 3px solid red;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 5px;
+}
+
+.actorpage-card-name {
+    color: var(--main-white);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.actorpage-card-dob {
+    color: var(--main-white);
+    font-size: 1.1rem;
 }

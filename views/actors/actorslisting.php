@@ -26,7 +26,7 @@
             <div class='actorpage-card'>
                 <img class='actor-card-image' src=".$image." alt='person image'>
                 <div class='actorpage-card-texts'>
-                    <p>".$actordata["firstname"]." ".$actordata["lastname"]."</p>
+                    <p class='actorpage-card-name' >".$actordata["firstname"]." ".$actordata["lastname"]."</p>
                     <p class='actorpage-card-dob'>".$pronoun." was born on ".$actor_dob."</p>
                 </div>
             </div>
