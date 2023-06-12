@@ -417,3 +417,24 @@ footer {
     padding: 15px 0;
     gap: 15px;
 }
+
+.producerlisting-head {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+.producerlisting-head-title {
+    font-size: 1.8rem;
+    color: var(--main-white);
+}
+
+.producerlisting-head-image {
+    height: 100%;
+    filter: invert();
+}

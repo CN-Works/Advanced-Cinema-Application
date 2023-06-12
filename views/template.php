@@ -21,7 +21,7 @@
             <li><a class="header-category unselectable" href="index.php?action=genreList">Genre</a></li>
             <li><a class="header-category unselectable" href="index.php?action=producerList">Producers</a></li>
         </ul>
-        <a class="header-connexion" href="">Connexion</a>
+        <a class="header-connexion unselectable" href="">Connexion</a>
     </header>
 
     <?php echo $content ?>
