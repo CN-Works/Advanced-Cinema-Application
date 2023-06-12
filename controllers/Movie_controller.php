@@ -42,7 +42,16 @@ class MovieController {
             $informations["duration"] = $info["duration"];
             $informations["summary"] = $info["summary"];
         }
+        
+
+        // Getting all genres of the movie
+        $genresSql = "SELECT ge.nom_genre AS genre_name
+                      FROM film f
+                      INNER JOIN posseder po ON f.id_film = po.id_film
+                      INNER JOIN genre ge ON po.id_genre = ge.id_genre
+                      WHERE f.id_film = :movieId";
     
+        $genres = $dao->executeRequest($genresSql, $params);
     
         require "views/movie/movieinfos.php";
     }
