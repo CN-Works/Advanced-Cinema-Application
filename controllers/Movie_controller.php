@@ -40,7 +40,7 @@ class MovieController {
             $informations["producer_lastname"] = $info["producer_lastname"];
             $informations["producer_firstname"] = $info["producer_firstname"];
             $informations["duration"] = $info["duration"];
-            $informations["summary "] = $info["summary"];
+            $informations["summary"] = $info["summary"];
         }
     
     
