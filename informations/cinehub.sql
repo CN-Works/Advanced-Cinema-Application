@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `acteur` (
   CONSTRAINT `acteur_ibfk_1` FOREIGN KEY (`id_personne`) REFERENCES `personne` (`id_personne`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Listage des données de la table cinehub.acteur : ~0 rows (environ)
+-- Listage des données de la table cinehub.acteur : ~6 rows (environ)
 INSERT INTO `acteur` (`id_acteur`, `id_personne`) VALUES
 	(2, 2),
 	(1, 3),
@@ -90,7 +90,14 @@ CREATE TABLE IF NOT EXISTS `jouer` (
   CONSTRAINT `jouer_ibfk_3` FOREIGN KEY (`id_acteur`) REFERENCES `acteur` (`id_acteur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Listage des données de la table cinehub.jouer : ~0 rows (environ)
+-- Listage des données de la table cinehub.jouer : ~6 rows (environ)
+INSERT INTO `jouer` (`id_film`, `id_role`, `id_acteur`) VALUES
+	(4, 1, 4),
+	(1, 2, 6),
+	(2, 3, 5),
+	(3, 4, 1),
+	(3, 4, 3),
+	(5, 5, 2);
 
 -- Listage de la structure de table cinehub. personne
 CREATE TABLE IF NOT EXISTS `personne` (
@@ -148,7 +155,7 @@ CREATE TABLE IF NOT EXISTS `role` (
   PRIMARY KEY (`id_role`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Listage des données de la table cinehub.role : ~0 rows (environ)
+-- Listage des données de la table cinehub.role : ~5 rows (environ)
 INSERT INTO `role` (`id_role`, `nom_role`) VALUES
 	(1, 'Superman'),
 	(2, 'Batman'),
