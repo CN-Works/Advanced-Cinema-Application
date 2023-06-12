@@ -3,11 +3,13 @@
     ob_start();
 ?>
 
-<?php
-    foreach ($movieinfos->fetchAll() as $info) {
-        echo $info["title"];
-    }
-?>
+<main>
+    <pre>
+        <?php
+        var_dump($informations);
+        ?>
+    </pre>
+</main>
 
 <?php
     $title = "CineHub - Informations";
