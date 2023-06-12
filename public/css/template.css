@@ -488,9 +488,15 @@ footer {
 
     padding: 15px 0;
     gap: 15px;
+
+    color: var(--main-white);
 }
 
 .movieinfo-banner {
     height: 30vh;
     aspect-ratio: 4/3;
+}
+
+.movieinfo-summary {
+    font-style: italic;
 }
