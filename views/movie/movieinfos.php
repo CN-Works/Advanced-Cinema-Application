@@ -17,6 +17,12 @@
         <h3>Produced by <?php echo $informations["producer_firstname"]." ".$informations["producer_lastname"]; ?> in <?php echo $informations["year_production"] ?></h3>
         <h4>Duration : <?php echo $informations["duration"]; ?> minutes</h4>
         <p class="movieinfo-summary">"<?php echo $informations["summary"]; ?>"</p>
+
+        <?php
+        foreach ($genres->fetchAll() as $info) {
+            echo $info["genre_name"];
+        }
+        ?>
     </div>
 </main>
 
