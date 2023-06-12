@@ -28,6 +28,9 @@ if (isset($_GET["action"])) {
         case "genreList":
             $genreController->findAllGenre();
             break;
+        case "producerList":
+            $personController->findAllProducers();
+            break;
         default:
             $homeController->goToHomePage();
     }

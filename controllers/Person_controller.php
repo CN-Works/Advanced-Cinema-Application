@@ -13,6 +13,19 @@ class PersonController {
 
         require "views/actors/actorslisting.php";
     }
+
+    public function findAllProducers(){
+        $dao = new DAO();
+
+        $sql = "SELECT pe.id_personne AS id_person, re.id_realisateur AS id_producer, pe.nom AS lastname, pe.prenom AS firstname
+                FROM personne pe
+                INNER JOIN realisateur re ON pe.id_personne = re.id_personne
+                GROUP BY pe.id_personne";
+        
+        $producers = $dao->executeRequest($sql);
+
+        require "views/producers/producerslisting.php";
+    }
 }
 
 ?>
