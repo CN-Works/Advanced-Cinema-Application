@@ -15,11 +15,11 @@
     <header>
         <a href="index.php?action=HomePage" class="header-logo unselectable"><img class="header-logo-image" src="public/images/cinehub.png" alt="CineHub logo"></a>
         <ul>
-            <li><a class="header-category" href="index.php?action=HomePage">Home</a></li>
-            <li><a class="header-category" href="index.php?action=movieList">Movies</a></li>
-            <li><a class="header-category" href="index.php?action=actorList">Actors</a></li>
-            <li><a class="header-category" href="index.php?action=genreList">Genre</a></li>
-            <li><a class="header-category" href="index.php?action=producerList">Producers</a></li>
+            <li><a class="header-category unselectable" href="index.php?action=HomePage">Home</a></li>
+            <li><a class="header-category unselectable" href="index.php?action=movieList">Movies</a></li>
+            <li><a class="header-category unselectable" href="index.php?action=actorList">Actors</a></li>
+            <li><a class="header-category unselectable" href="index.php?action=genreList">Genre</a></li>
+            <li><a class="header-category unselectable" href="index.php?action=producerList">Producers</a></li>
         </ul>
         <a class="header-connexion" href="">Connexion</a>
     </header>
