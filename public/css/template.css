@@ -209,6 +209,10 @@ footer {
 
     gap: 5px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     /* background-color: var(--main-dark-blue); */
 
     transition: all, 0.5s;
@@ -233,7 +237,6 @@ footer {
     font-style: italic;
     font-weight: bold;
 
-    padding: 0 5px;
 
     margin: 10px 0;
 }
@@ -252,7 +255,9 @@ footer {
 
 .movielist-card-button {
     width: 100%;
-    height: 30px;
+    height: 25px;
+    font-style: italic;
+    text-align: center;
 
     background: none;
     border: none;
