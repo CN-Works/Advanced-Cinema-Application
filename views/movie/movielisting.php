@@ -30,7 +30,7 @@
             "<div class='movielist-card'>
                 <img class='movielist-banner unselectable' src='".$image."' alt='".$movie["titre"]." movie banner image'>
                 <p class='movielist-card-title'>".$movie["titre"]." (".$movie_date."),</p>
-                <p class='movielist-card-description'>".$movie["summary"]."</p>
+                <a class='movielist-card-button' href='index.php?action=movieInformations&id=".$movie["id_film"]."'>See more</a>
             </div>";
         }
 
