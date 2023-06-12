@@ -22,6 +22,14 @@ if (isset($_GET["action"])) {
         case "movieList":
             $movieController->findAllMovies();
             break;
+        case "movieInformations":
+            // Just checking if "id" is not null so it can search in db
+            if (isset($_GET["movieId"])) {
+                $movieController->getMovieInformations($_GET["movieId"]);
+            } else {
+                $homeController->goToHomePage();
+            }
+            break;
         case "actorList":
             $personController->findAllActors();
             break;
