@@ -5,7 +5,7 @@
 
 <main class="genrelist-main">
     <div class="genrelist-head">
-        <h2 class="genrelist-head-title">All Genre</h2>
+        <h2 class="genrelist-head-title">All genre</h2>
         <img class="genrelist-head-image unselectable" src="public/images/movie_camera.png" alt="Movie genre icon">
     </div>
 
