@@ -11,11 +11,13 @@
             $image = "public/images/default-image.png";
         }
     ?>
-    <img class="movieinfo-banner unselectable" src="<?php echo $image ?>" alt="Movie banner of the movie <?php echo $informations["title"] ?>">
-    <h2><?php echo $informations["title"]; ?></h2>
-    <h3>Produced by <?php echo $informations["producer_firstname"]." ".$informations["producer_lastname"]; ?> in <?php echo $informations["year_production"] ?></h3>
-    <h4>Duration : <?php echo $informations["duration"]; ?> minutes</h4>
-    <p class="movieinfo-summary">"<?php echo $informations["summary"]; ?>"</p>
+    <div class="movieinfo-card">
+        <img class="movieinfo-banner unselectable" src="<?php echo $image ?>" alt="Movie banner of the movie <?php echo $informations["title"] ?>">
+        <h2><?php echo $informations["title"]; ?></h2>
+        <h3>Produced by <?php echo $informations["producer_firstname"]." ".$informations["producer_lastname"]; ?> in <?php echo $informations["year_production"] ?></h3>
+        <h4>Duration : <?php echo $informations["duration"]; ?> minutes</h4>
+        <p class="movieinfo-summary">"<?php echo $informations["summary"]; ?>"</p>
+    </div>
 </main>
 
 <?php
