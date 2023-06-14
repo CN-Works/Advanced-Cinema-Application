@@ -34,6 +34,11 @@
             </div>";
         }
 
+        echo 
+            "<a class='movielist-card-plus' href='index.php'>
+                <img class='movielist-banner-plus unselectable' src='public/images/plus.png' alt=''>
+            </a>";
+
         ?>
     </div>
 </main>
