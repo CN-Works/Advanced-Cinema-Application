@@ -65,6 +65,14 @@ class MovieController {
     
         require "views/movie/movieinfos.php";
     }
+
+    public function addMovieForm() {
+        $dao = new DAO();
+
+        require("views/movie/addmovie.php");
+    }
+
+    
 }
 
 ?>

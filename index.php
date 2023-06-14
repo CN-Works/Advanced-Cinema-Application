@@ -30,6 +30,12 @@ if (isset($_GET["action"])) {
                 $homeController->goToHomePage();
             }
             break;
+        case "addMovie" :
+            $movieController->addMovieForm();
+            break;
+        case "addingMovie" :
+            $movieController->addMovie();
+            break;
         case "actorList":
             $personController->findAllActors();
             break;
