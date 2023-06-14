@@ -35,7 +35,7 @@
         }
 
         echo 
-            "<a class='movielist-card-plus' href='index.php'>
+            "<a class='movielist-card-plus' href='index.php?action=addMovie'>
                 <img class='movielist-banner-plus unselectable' src='public/images/plus.png' alt=''>
             </a>";
 
