@@ -18,11 +18,11 @@
         <h4>Duration : <?php echo $informations["duration"]; ?> minutes</h4>
         <p class="movieinfo-summary">"<?php echo $informations["summary"]; ?>"</p>
 
-        <?php
+        <p>Category : <?php
         foreach ($genres->fetchAll() as $info) {
-            echo $info["genre_name"];
+            echo $info["genre_name"].", ";
         }
-        ?>
+        ?></p>
     </div>
 </main>
 
