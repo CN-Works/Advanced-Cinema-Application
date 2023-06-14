@@ -26,6 +26,7 @@
 
 header {
     height: 10vh;
+    width: 100%;
     background-color: var(--main-dark-blue);
 
     display: flex;
@@ -461,16 +462,17 @@ footer {
 
 .producerlisting-cards {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
 .producerlisting-card {
-    height: 30vh;
-    width: 25%;
+    width: 75%;
+    height: 40vh;
 
-    margin: 15px;
+    margin: 20px 0;
 
     display: flex;
     flex-direction: column;
@@ -478,11 +480,16 @@ footer {
     justify-content: center;
 
     box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.25);
+    transition: all, 0.5s;
+}
+
+.producerlisting-card:hover {
+    background-color: rgba(0, 0, 0, 0.286);
 }
 
 .producerlisting-card-link {
     color: var(--main-white);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .producerlisting-card-link:visited {
