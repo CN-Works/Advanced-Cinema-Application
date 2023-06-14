@@ -281,7 +281,7 @@ footer {
 }
 
 .movielist-card-button {
-    width: 100%;
+    margin: 5px 0;
     height: 25px;
     font-style: italic;
     text-align: center;
