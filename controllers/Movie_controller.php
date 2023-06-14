@@ -25,8 +25,8 @@ class MovieController {
                     INNER JOIN personne pe ON re.id_personne = pe.id_personne
                     WHERE f.id_film = :movieId";
     
-        $params = array(':movieId' => $movieId);
-        $movieinfos = $dao->executeRequest($filmSql, $params);
+        $query_parameter = array(':movieId' => $movieId);
+        $movieinfos = $dao->executeRequest($filmSql, $query_parameter);
 
         $informations = array();
 
@@ -51,7 +51,17 @@ class MovieController {
                       INNER JOIN genre ge ON po.id_genre = ge.id_genre
                       WHERE f.id_film = :movieId";
     
-        $genres = $dao->executeRequest($genresSql, $params);
+        $genres = $dao->executeRequest($genresSql, $query_parameter);
+
+        $casting_request = "SELECT jo.id_film AS id_film, jo.id_role AS id_role, jo.id_acteur AS id_actor, pe.nom AS lastname, pe.prenom AS firstname, ro.nom_role AS rolename, f.titre_film AS title_movie
+                    FROM jouer jo
+                    INNER JOIN film f ON jo.id_film = f.id_film
+                    INNER JOIN role_movie ro ON jo.id_role = ro.id_role
+                    INNER JOIN acteur ac ON jo.id_acteur = ac.id_acteur
+                    INNER JOIN personne pe ON ac.id_personne = pe.id_personne
+                    WHERE f.id_film = :movieId";
+        
+        $casting = $dao->executeRequest($casting_request, $query_parameter);
     
         require "views/movie/movieinfos.php";
     }
