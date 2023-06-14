@@ -468,12 +468,25 @@ footer {
 
 .producerlisting-card {
     height: 30vh;
-    width: 40%;
+    width: 25%;
+
+    margin: 15px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.25);
+}
+
+.producerlisting-card-link {
+    color: var(--main-white);
+    font-size: 1.2rem;
+}
+
+.producerlisting-card-link:visited {
+    color: var(--main-white);
 }
 
 /* Movie Info */
@@ -506,9 +519,9 @@ footer {
     gap: 15px;
 }
 
-..movieinfo-card:hover {
+/* .movieinfo-card:hover {
     box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.25);
-}
+} */
 
 .movieinfo-summary {
     font-style: italic;
