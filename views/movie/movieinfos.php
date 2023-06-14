@@ -18,11 +18,20 @@
         <h4>Duration : <?php echo $informations["duration"]; ?> minutes</h4>
         <p class="movieinfo-summary">"<?php echo $informations["summary"]; ?>"</p>
 
-        <p>Category : <?php
-        foreach ($genres->fetchAll() as $info) {
-            echo $info["genre_name"].", ";
-        }
-        ?></p>
+        <h4>Category :</h4> 
+        <?php
+            foreach ($genres->fetchAll() as $info) {
+                echo "<p>".$info["genre_name"]."</p>";
+            }
+        ?>
+
+        <h4>Actors and their roles :</h4>
+        <?php
+            foreach ($casting->fetchAll() as $info) {
+                echo "<p>".$info["firstname"]." ".$info["lastname"]." played ".$info["rolename"]."</p>";
+            }
+        ?>
+
     </div>
 </main>
 
