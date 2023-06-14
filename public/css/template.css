@@ -554,3 +554,16 @@ footer {
 .movieinfo-summary {
     font-style: italic;
 }
+
+/* Add movie */
+.addmovie-main {
+    background: linear-gradient(var(--main-orange), var(--main-dark-blue));
+    min-height: 85vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 15px 0;
+    gap: 15px;
+}
