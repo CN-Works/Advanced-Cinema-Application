@@ -9,22 +9,22 @@
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title" >Title</h3>
-            <input class="addmovie-element-input" type="text" id="title" name="title" value="" required>
+            <input class="addmovie-element-input" type="text" name="title" value="" required>
         </div>
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title" >Summary</h3>
-            <input class="addmovie-element-input" type="text" id="summary" name="summary" value="" required>
+            <input class="addmovie-element-input" type="text" name="summary" value="" required>
         </div>
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title">Year of production</h3>
-            <input class="addmovie-element-input" type="date" name="prod_time" id="prod_time" placeholder="2000" required>
+            <input class="addmovie-element-input" type="date" name="prod_time" placeholder="2010" required>
         </div>
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title">Genre</h3>
-            <select class="addmovie-element-select" name="genre" id="genre" multiple required>
+            <select class="addmovie-element-select" name="genre" multiple required>
                 <?php
                     foreach ($availableGenres->fetchAll() as $genreData) {
                         $genreId = $genreData['id'];
@@ -37,7 +37,7 @@
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title">Producer</h3>
-            <select class="addmovie-element-select" name="genre" id="genre" required>
+            <select class="addmovie-element-select" name="genre" required>
                 <?php
                     foreach ($availableProducer->fetchAll() as $data) {
                         $producerId = $data['id'];
@@ -47,7 +47,13 @@
             </select>
         </div>
 
-        <button class="addmovie-button" type="submit">Submit</button>
+        <div class="addmovie-element">
+            <h3 class="addmovie-element-title" >Image (link)</h3>
+            <input class="addmovie-element-input" type="text" id="title" name="title" value="">
+        </div>
+
+
+        <button class="addmovie-button" type="submit" name="newMovie">Submit</button>
     </form>
 </main>
 
