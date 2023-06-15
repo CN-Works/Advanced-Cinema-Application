@@ -80,6 +80,13 @@ class MovieController {
 
         require("views/movie/addmovie.php");
     }
+
+    public function addingMovie() {
+        $dao = new DAO();
+
+        echo $_POST['title'];
+        echo $_POST['summary'];
+    }
 }
 
 ?>
