@@ -630,3 +630,14 @@ footer {
     border: none;
     outline: none;
 }
+
+.addmovie-element-select {
+    min-height: 30px;
+    width: 200px;
+    border: none;
+}
+
+.addmovie-element-select:focus {
+    outline: none;
+    border: none;
+}
