@@ -7,7 +7,8 @@ class DAO {
     }    
     function getDB() {        
         return $this->db;    
-    }    
+    }
+
     public function executeRequest($sql, $params = NULL) {        
         if ($params == NULL){            
             $resultat = $this->db->query($sql);        

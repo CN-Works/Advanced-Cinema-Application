@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 // Getting all controller files
 require_once "controllers/Home_controller.php";
 require_once "controllers/Genre_controller.php";

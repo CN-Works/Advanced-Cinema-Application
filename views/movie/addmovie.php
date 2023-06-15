@@ -51,9 +51,8 @@
             <h3 class="addmovie-element-title" >Image (link)</h3>
             <input class="addmovie-element-input" type="text" name="imagelink" value="">
         </div>
-
-
-        <button class="addmovie-button" type="submit" name="newMovie">Submit</button>
+        
+        <input class="addmovie-button" type="submit" name="new_movie" value="Create">
     </form>
 </main>
 

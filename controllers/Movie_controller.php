@@ -83,7 +83,8 @@ class MovieController {
 
     public function addingMovie() {
         $dao = new DAO();
-        echo $_POST['title']." ".$_POST['summary'];
+
+        require "views/movie/movieinfos?id=".$dao->getDB()->lastinsertId().".php";
     }
 }
 

@@ -575,6 +575,7 @@ footer {
     background-color: var(--main-dark-blue);
     min-height: 600px;
     width: 30%;
+    padding: 30px 0;
     border-radius: 5px;
 
     display: flex;
