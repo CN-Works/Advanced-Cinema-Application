@@ -563,7 +563,70 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     padding: 15px 0;
     gap: 15px;
+
+    color: var(--main-white);
+}
+
+.addmovie-card {
+    background-color: var(--main-dark-blue);
+    min-height: 600px;
+    width: 30%;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.addmovie-title {
+    font-size: 1.9rem;
+}
+
+.addmovie-element {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.addmovie-button {
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 4px;
+
+    color: var(--main-white);
+    background-color: var(--main-blue);
+}
+
+.addmovie-button:hover {
+    background-color: #417B5A;
+}
+
+.addmovie-element-title {
+    font-size: 1.2rem;
+}
+
+.addmovie-element-input {
+    height: 30px;
+    width: 200px;
+    border: none;
+
+    padding: 5px;
+}
+
+.addmovie-element-input:focus {
+    border: none;
+    outline: none;
 }
