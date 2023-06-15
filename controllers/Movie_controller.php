@@ -75,8 +75,8 @@ class MovieController {
                 FROM realisateur r
                 INNER JOIN personne p ON r.id_personne = p.id_personne";
 
-        $availableGenres = $dao->executeRequest($sql1);
-        $availableProducer = $dao->executeRequest($sql2);
+        $availableGenres = $dao->executeRequest($getAllGenres);
+        $availableProducer = $dao->executeRequest($getAllProducers);
 
         require("views/movie/addmovie.php");
     }
