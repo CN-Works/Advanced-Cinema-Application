@@ -19,7 +19,7 @@
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title">Year of production</h3>
-            <input class="addmovie-element-input" type="date" name="prod_time" placeholder="2010" required>
+            <input class="addmovie-element-input" type="date" name="prod_year" placeholder="2010" required>
         </div>
 
         <div class="addmovie-element">
@@ -49,7 +49,7 @@
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title" >Image (link)</h3>
-            <input class="addmovie-element-input" type="text" id="title" name="title" value="">
+            <input class="addmovie-element-input" type="text" name="imagelink" value="">
         </div>
 
 

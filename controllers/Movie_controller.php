@@ -83,9 +83,7 @@ class MovieController {
 
     public function addingMovie() {
         $dao = new DAO();
-
-        echo $_POST['title'];
-        echo $_POST['summary'];
+        echo $_POST['title']." ".$_POST['summary'];
     }
 }
 
