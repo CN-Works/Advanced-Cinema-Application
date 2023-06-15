@@ -34,7 +34,7 @@ if (isset($_GET["action"])) {
             $movieController->addMovieForm();
             break;
         case "addingMovie" :
-            $movieController->addMovie();
+            $movieController->addingMovie();
             break;
         case "actorList":
             $personController->findAllActors();
