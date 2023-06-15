@@ -24,12 +24,24 @@
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title">Genre</h3>
-            <select class="addmovie-element-select" name="genre" id="genre" required>
+            <select class="addmovie-element-select" name="genre" id="genre" multiple required>
                 <?php
                     foreach ($availableGenres->fetchAll() as $genreData) {
                         $genreId = $genreData['id'];
                         $genreLabel = $genreData['genre_label'];
                         echo "<option value='".$genreId."'>".$genreLabel."</option>";
+                    }
+                ?>
+            </select>
+        </div>
+
+        <div class="addmovie-element">
+            <h3 class="addmovie-element-title">Producer</h3>
+            <select class="addmovie-element-select" name="genre" id="genre" required>
+                <?php
+                    foreach ($availableProducer->fetchAll() as $data) {
+                        $producerId = $data['id'];
+                        echo "<option value='".$producerId."'>".$data['firstname']." ".$data['lastname']."</option>";
                     }
                 ?>
             </select>
