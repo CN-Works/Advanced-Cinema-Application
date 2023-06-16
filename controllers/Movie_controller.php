@@ -69,11 +69,8 @@ class MovieController {
     public function addMovieForm() {
         $dao = new DAO();
 
-        $getAllGenres = "SELECT ge.id_genre AS id, ge.nom_genre AS genre_label
-                FROM genre ge";
-        $getAllProducers = "SELECT r.id_realisateur AS id, p.nom AS lastname, p.prenom AS firstname
-                FROM realisateur r
-                INNER JOIN personne p ON r.id_personne = p.id_personne";
+        $getAllGenres = "SELECT ge.id_genre AS id, ge.nom_genre AS genre_label FROM genre ge";
+        $getAllProducers = "SELECT r.id_realisateur AS id, p.nom AS lastname, p.prenom AS firstname FROM realisateur r INNER JOIN personne p ON r.id_personne = p.id_personne";
 
         $availableGenres = $dao->executeRequest($getAllGenres);
         $availableProducer = $dao->executeRequest($getAllProducers);
