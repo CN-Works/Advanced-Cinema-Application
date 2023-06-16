@@ -23,7 +23,7 @@
 </main>
 
 <?php
-    $title = "CineHub - Genre";
+    $title = "CineHub - Genres";
     $content = ob_get_clean();
     require("views/template.php");
 ?>

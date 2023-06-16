@@ -84,7 +84,32 @@ class MovieController {
     public function addingMovie() {
         $dao = new DAO();
 
-        require "views/movie/movieinfos?id=".$dao->getDB()->lastinsertId().".php";
+        if (isset($_POST)) {
+            // Production year
+            $date = filter_input(INPUT_POST, 'prod_year', FILTER_SANITIZE_SPECIAL_CHARS);
+            $date = strtotime($date);
+
+            // Image link
+            $img_film = filter_input(INPUT_POST, 'imagelink', FILTER_VALIDATE_URL);
+
+            // Title
+            $titre = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
+
+            // Duration in minutes
+            $duration = filter_input(INPUT_POST, 'duration', FILTER_SANITIZE_NUMBER_INT);
+
+            // Movie's summary
+            $summary = filter_input(INPUT_POST, 'summary', FILTER_SANITIZE_SPECIAL_CHARS);
+
+            // By default in my db, the id is always an integer
+            $producer = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+
+            $addingMovieQuery = "";
+
+            echo "<pre>".var_dump($_POST["genre"])."</pre>";
+        }
+
+        // require "views/movie/movieinfos?id=".$dao->getDB()->lastinsertId().".php";
     }
 }
 
