@@ -118,8 +118,12 @@ class MovieController {
             );
 
             $new_movie = $dao->executeRequest($addingMovieQuery, $params);
+            $lastId = $dao->getBDD()->lastInsertId();
+
+            header("location: http://localhost/CineHub/index.php?action=movieInformations&movieId=".$lastId);
+        } else {
+            header('location: http://localhost/CineHub/index.php?action=movieList');
         }
-        header('http://localhost/CineHub/index.php?action=movieList');
     }
 
     public function removeMovie($movieId) {
@@ -135,7 +139,7 @@ class MovieController {
 
         // $removeCasting = "DELETE FROM posseder WHERE id_film = :idFilm";
 
-        header("views/movie/movielisting.php");
+        header('location: http://localhost/CineHub/index.php?action=movieList');
     }
 }
 
