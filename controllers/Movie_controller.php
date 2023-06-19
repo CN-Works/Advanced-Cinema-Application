@@ -81,16 +81,17 @@ class MovieController {
     public function addingMovie() {
         $dao = new DAO();
 
-        if (isset($_POST)) {
+        if (isset($_POST['add'])) {
+
             // Production year
             $date = filter_input(INPUT_POST, 'prod_year', FILTER_SANITIZE_SPECIAL_CHARS);
-            $date = strtotime($date);
+            // $date = strtotime($date);
 
             // Image link
             $img_film = filter_input(INPUT_POST, 'imagelink', FILTER_VALIDATE_URL);
 
             // Title
-            $titre = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
+            $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_SPECIAL_CHARS);
 
             // Duration in minutes
             $duration = filter_input(INPUT_POST, 'duration', FILTER_SANITIZE_NUMBER_INT);
@@ -99,14 +100,27 @@ class MovieController {
             $summary = filter_input(INPUT_POST, 'summary', FILTER_SANITIZE_SPECIAL_CHARS);
 
             // By default in my db, the id is always an integer
-            $producer = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_NUMBER_INT);
+            $producer = filter_input(INPUT_POST, 'producer', FILTER_SANITIZE_NUMBER_INT);
 
-            $addingMovieQuery = "";
+            // $genres filter_var_array();
 
-            echo "<pre>".var_dump($_POST["genre"])."</pre>";
+            $addingMovieQuery = "INSERT INTO film (titre_film, annee_film, duree_film, image_film, synopsis_film, id_realisateur, note_film) 
+            VALUES (:title, :prod_year, :duration, :imagelink, :summary, :producer, :note)";
+
+            $params = array(
+                ":title" => $title,
+                ":prod_year" => $date,
+                ":duration" => $duration,
+                ":imagelink" => $img_film,
+                ":summary" => $summary,
+                ":producer" => $producer,
+                ":note" => 0.8
+            );
+
+            $new_movie = $dao->executeRequest($addingMovieQuery, $params);
         }
 
-        // require "views/movie/movieinfos?id=".$dao->getDB()->lastinsertId().".php";
+        require "views/movie/movielisting.php";
     }
 }
 
