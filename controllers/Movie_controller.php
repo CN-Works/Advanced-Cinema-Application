@@ -119,8 +119,23 @@ class MovieController {
 
             $new_movie = $dao->executeRequest($addingMovieQuery, $params);
         }
+        header('http://localhost/CineHub/index.php?action=movieList');
+    }
 
-        require "views/movie/movielisting.php";
+    public function removeMovie($movieId) {
+        $dao = new DAO();
+
+        // Removing movie from "Film" table
+        $removeMovie = "DELETE FROM Film WHERE id_Film = :movieId";
+        $params = array(
+            ":movieId" => $movieId,
+        );
+
+        $dao->executeRequest($removeMovie,$params);
+
+        // $removeCasting = "DELETE FROM posseder WHERE id_film = :idFilm";
+
+        header("views/movie/movielisting.php");
     }
 }
 
