@@ -23,8 +23,13 @@
         </div>
 
         <div class="addmovie-element">
+            <h3 class="addmovie-element-title">Duration</h3>
+            <input class="addmovie-element-input" type="number" name="duration" min="1" required>
+        </div>
+
+        <div class="addmovie-element">
             <h3 class="addmovie-element-title">Genre</h3>
-            <select class="addmovie-element-select" name="genre" multiple required>
+            <select class="addmovie-element-select" name="genre[]" multiple required>
                 <?php
                     foreach ($availableGenres->fetchAll() as $genreData) {
                         $genreId = $genreData['id'];
@@ -37,7 +42,7 @@
 
         <div class="addmovie-element">
             <h3 class="addmovie-element-title">Producer</h3>
-            <select class="addmovie-element-select" name="genre" required>
+            <select class="addmovie-element-select" name="producer" required>
                 <?php
                     foreach ($availableProducer->fetchAll() as $data) {
                         $producerId = $data['id'];
@@ -52,7 +57,7 @@
             <input class="addmovie-element-input" type="text" name="imagelink" value="">
         </div>
         
-        <input class="addmovie-button" type="submit" name="new_movie" value="Create">
+        <input class="addmovie-button" type="submit" name="add" value="Create">
     </form>
 </main>
 
