@@ -293,6 +293,10 @@ footer {
     transition: all, 0.5s;
 }
 
+.movielist-card-button:hover {
+    color: var(--main-orange);
+}
+
 /* Actor Page */
 
 .actorpage-main {
