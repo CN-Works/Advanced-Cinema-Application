@@ -118,7 +118,7 @@ class MovieController {
             );
 
             $new_movie = $dao->executeRequest($addingMovieQuery, $params);
-            $lastId = $dao->getBDD()->lastInsertId();
+            $lastId = $dao->getDB()->lastInsertId();
 
             header("location: http://localhost/CineHub/index.php?action=movieInformations&movieId=".$lastId);
         } else {
