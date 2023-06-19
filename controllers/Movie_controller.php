@@ -141,6 +141,13 @@ class MovieController {
 
         header('location: http://localhost/CineHub/index.php?action=movieList');
     }
+
+    public function updateMovie($movieId) {
+        $dao = new DAO();
+
+
+        require("views/movie/updatemovie.php");
+    }
 }
 
 ?>

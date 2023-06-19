@@ -43,6 +43,14 @@ if (isset($_GET["action"])) {
                 $homeController->goToHomePage();
             }
             break;
+        case "updateMovie" :
+            // Just checking if the movie "id" is not null so it can search in db
+            if (isset($_GET["movieId"])) {
+                $movieController->updateMovie($_GET["movieId"]);
+            } else {
+                $homeController->goToHomePage();
+            }
+            break;
         case "addingMovie" :
             $movieController->addingMovie();
             break;

@@ -31,6 +31,7 @@
                 <img class='movielist-banner unselectable' src='".$image."' alt='".$movie["titre"]." movie banner image'>
                 <p class='movielist-card-title'>".$movie["titre"]." (".$movie_date."),</p>
                 <a class='movielist-card-button unselectable' href='index.php?action=movieInformations&movieId=".$movie["id_film"]."'>See more</a>
+                <a class='movielist-card-button unselectable' href='index.php?action=updateMovie&movieId=".$movie["id_film"]."'>Edit</a>
                 <a class='movielist-card-button unselectable' href='index.php?action=removeMovie&movieId=".$movie["id_film"]."'>Delete</a>
             </div>";
         }
