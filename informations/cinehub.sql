@@ -42,28 +42,34 @@ CREATE TABLE IF NOT EXISTS `film` (
   `id_film` int NOT NULL AUTO_INCREMENT,
   `annee_film` date NOT NULL,
   `duree_film` int DEFAULT NULL,
-  `titre_film` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `synopsis_film` text COLLATE utf8mb4_general_ci,
+  `titre_film` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `synopsis_film` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   `note_film` decimal(1,1) DEFAULT NULL,
   `id_realisateur` int NOT NULL,
   `image_film` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id_film`),
   KEY `id_realisateur` (`id_realisateur`),
   CONSTRAINT `film_ibfk_1` FOREIGN KEY (`id_realisateur`) REFERENCES `realisateur` (`id_realisateur`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Listage des données de la table cinehub.film : ~5 rows (environ)
+-- Listage des données de la table cinehub.film : ~10 rows (environ)
 INSERT INTO `film` (`id_film`, `annee_film`, `duree_film`, `titre_film`, `synopsis_film`, `note_film`, `id_realisateur`, `image_film`) VALUES
 	(1, '2020-11-15', 95, 'The Building', 'A movie about concrete structure, doors and shells', 0.2, 2, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3ypuHlO1WZsuzZCd48zybH73scUl2dIJ3Yw&usqp=CAU'),
 	(2, '2011-10-18', 120, 'House Keeper', 'Somebody who keeps the house', 0.8, 3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOjU8Ua85AfzL81AsIvpugefHVXh6-6zpynQ&usqp=CAU'),
 	(3, '2022-05-29', 90, 'The killer of town', 'A bad killer, murdering people in a town', 0.9, 1, 'https://media.istockphoto.com/id/1018003726/photo/criminal-or-bandit-holding-a-knife.jpg?s=612x612&w=0&k=20&c=DMg05eZ8UaZTlW4OaBGhpi4-0SooZbDTN8amTUZGUfg='),
 	(4, '2015-06-01', 105, 'Go up and down', 'Going up and going down for some reasons.', 0.7, 2, 'https://d23.com/app/uploads/2019/05/1180w-600h_052919_up-anniversary-facts-780x440.jpg'),
-	(5, '2019-11-25', 65, 'Two Plus One', 'Someone meeting someone else in a bar and they talk during all the movie', 0.6, 3, NULL);
+	(5, '2019-11-25', 65, 'Two Plus One', 'Someone meeting someone else in a bar and they talk during all the movie', 0.6, 3, NULL),
+	(6, '2023-06-04', 45, 'Maxime en Albanie', 'il roule en bmw', 0.8, 3, 'https://img.filmsactu.net/datas/fiches/c/o/comedie/xl/comedie-5f089739e263a.jpg'),
+	(8, '2023-06-02', 37, 'Quentin à la plage', 'ça bronze au max', 0.8, 1, 'https://hips.hearstapps.com/hmg-prod/images/lambo-movie-1670273580.jpeg'),
+	(9, '2014-06-19', 95, 'Pokemon', 'Catch them all', 0.8, 2, 'https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/others_3/SI_Pokemon.jpg'),
+	(10, '2015-08-15', 130, 'Pokemon 2', 'Keep catching them all', 0.8, 2, 'https://legends.pokemon.com/assets/home/home_trailer_thumb.jpg'),
+	(11, '2019-07-19', 85, 'Pokemon 3', 'gg', 0.8, 1, 'https://images.nintendolife.com/072def9b7bd62/transfer-only-pokemon-in-scarlet-and-violet.large.jpg'),
+	(13, '2007-08-19', 95, 'Salmon Fish', 'fishing fish', 0.8, 2, 'https://www.firstforwomen.com/wp-content/uploads/sites/2/2022/05/Salmon-story-image.jpg');
 
 -- Listage de la structure de table cinehub. genre
 CREATE TABLE IF NOT EXISTS `genre` (
   `id_genre` int NOT NULL AUTO_INCREMENT,
-  `nom_genre` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nom_genre` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id_genre`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -86,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `jouer` (
   KEY `id_role` (`id_role`),
   KEY `id_acteur` (`id_acteur`),
   CONSTRAINT `jouer_ibfk_1` FOREIGN KEY (`id_film`) REFERENCES `film` (`id_film`),
-  CONSTRAINT `jouer_ibfk_2` FOREIGN KEY (`id_role`) REFERENCES `role` (`id_role`),
+  CONSTRAINT `jouer_ibfk_2` FOREIGN KEY (`id_role`) REFERENCES `role_movie` (`id_role`),
   CONSTRAINT `jouer_ibfk_3` FOREIGN KEY (`id_acteur`) REFERENCES `acteur` (`id_acteur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -102,9 +108,9 @@ INSERT INTO `jouer` (`id_film`, `id_role`, `id_acteur`) VALUES
 -- Listage de la structure de table cinehub. personne
 CREATE TABLE IF NOT EXISTS `personne` (
   `id_personne` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `prenom` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `sexe` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nom` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `prenom` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `sexe` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `dateNaissance` date NOT NULL,
   PRIMARY KEY (`id_personne`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -123,15 +129,25 @@ INSERT INTO `personne` (`id_personne`, `nom`, `prenom`, `sexe`, `dateNaissance`)
 
 -- Listage de la structure de table cinehub. posseder
 CREATE TABLE IF NOT EXISTS `posseder` (
+  `id_posseder` int NOT NULL AUTO_INCREMENT,
   `id_film` int NOT NULL,
   `id_genre` int NOT NULL,
-  PRIMARY KEY (`id_film`,`id_genre`),
+  PRIMARY KEY (`id_posseder`),
   KEY `id_genre` (`id_genre`),
+  KEY `id_film` (`id_film`),
   CONSTRAINT `posseder_ibfk_1` FOREIGN KEY (`id_film`) REFERENCES `film` (`id_film`),
   CONSTRAINT `posseder_ibfk_2` FOREIGN KEY (`id_genre`) REFERENCES `genre` (`id_genre`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Listage des données de la table cinehub.posseder : ~0 rows (environ)
+-- Listage des données de la table cinehub.posseder : ~7 rows (environ)
+INSERT INTO `posseder` (`id_posseder`, `id_film`, `id_genre`) VALUES
+	(1, 1, 4),
+	(2, 1, 5),
+	(3, 2, 3),
+	(4, 3, 1),
+	(5, 4, 2),
+	(6, 4, 6),
+	(7, 5, 6);
 
 -- Listage de la structure de table cinehub. realisateur
 CREATE TABLE IF NOT EXISTS `realisateur` (
@@ -148,15 +164,15 @@ INSERT INTO `realisateur` (`id_realisateur`, `id_personne`) VALUES
 	(1, 8),
 	(2, 9);
 
--- Listage de la structure de table cinehub. role
-CREATE TABLE IF NOT EXISTS `role` (
+-- Listage de la structure de table cinehub. role_movie
+CREATE TABLE IF NOT EXISTS `role_movie` (
   `id_role` int NOT NULL AUTO_INCREMENT,
-  `nom_role` varchar(50) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `nom_role` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   PRIMARY KEY (`id_role`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Listage des données de la table cinehub.role : ~5 rows (environ)
-INSERT INTO `role` (`id_role`, `nom_role`) VALUES
+-- Listage des données de la table cinehub.role_movie : ~5 rows (environ)
+INSERT INTO `role_movie` (`id_role`, `nom_role`) VALUES
 	(1, 'Superman'),
 	(2, 'Batman'),
 	(3, 'Supergirl'),

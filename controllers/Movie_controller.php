@@ -13,7 +13,7 @@ class MovieController {
         require("views/movie/movielisting.php");
     }
 
-    public function getMovieInformations($movieId) {
+    public function getMovieInformationsPage($movieId) {
         $dao = new DAO();
         
         // Get movie informations
@@ -142,11 +142,38 @@ class MovieController {
         header('location: http://localhost/CineHub/index.php?action=movieList');
     }
 
-    public function updateMovie($movieId) {
+    public function updateMovieForm($movieId) {
         $dao = new DAO();
 
+        // Get movie informations
+        $filmSql = "SELECT f.id_film AS id_movie, re.id_realisateur AS id_producer, f.image_film AS image_movie,
+                    f.titre_film AS title, YEAR(f.annee_film) AS year_production, pe.prenom AS producer_firstname,
+                    pe.nom AS producer_lastname, f.duree_film AS duration, f.synopsis_film AS summary 
+                    FROM film f
+                    INNER JOIN realisateur re ON f.id_realisateur = re.id_realisateur
+                    INNER JOIN personne pe ON re.id_personne = pe.id_personne
+                    WHERE f.id_film = :movieId";
+    
+        $query_parameter = array(':movieId' => $movieId);
+        $movieinfos = $dao->executeRequest($filmSql, $query_parameter);
 
-        require("views/movie/updatemovie.php");
+        $informations = array();
+
+        // Setting up data in a usable array (because of PDO object)
+        foreach ($movieinfos->fetchAll() as $info) {
+            $informations["title"] = $info["title"];
+            $informations["id_movie"] = $info["id_movie"];
+            $informations["id_producer"] = $info["id_producer"];
+            $informations["image_movie"] = $info["image_movie"];
+            $informations["year_production"] = $info["year_production"];
+            $informations["producer_lastname"] = $info["producer_lastname"];
+            $informations["producer_firstname"] = $info["producer_firstname"];
+            $informations["duration"] = $info["duration"];
+            $informations["summary"] = $info["summary"];
+        }
+
+
+        require "views/movie/updatemovie.php";
     }
 }
 

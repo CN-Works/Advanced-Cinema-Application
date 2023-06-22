@@ -27,7 +27,7 @@ if (isset($_GET["action"])) {
         case "movieInformations":
             // Just checking if the movie "id" is not null so it can search in db
             if (isset($_GET["movieId"])) {
-                $movieController->getMovieInformations($_GET["movieId"]);
+                $movieController->getMovieInformationsPage($_GET["movieId"]);
             } else {
                 $homeController->goToHomePage();
             }
@@ -46,7 +46,7 @@ if (isset($_GET["action"])) {
         case "updateMovie" :
             // Just checking if the movie "id" is not null so it can search in db
             if (isset($_GET["movieId"])) {
-                $movieController->updateMovie($_GET["movieId"]);
+                $movieController->updateMovieForm($_GET["movieId"]);
             } else {
                 $homeController->goToHomePage();
             }
